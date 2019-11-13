@@ -1,0 +1,55 @@
+h1.NewProduct{
+    text-align: center;
+    font-size: 200%;
+    font-family: fantasy;
+}
+body{
+  
+  color: black;
+  font-weight: bold;
+}
+#Icon{
+  background: url("SnowboardHintergrund.jpg");
+  width: 200px;
+  height: 120px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-top: 25px;
+  float: left;
+}
+div{
+  font-size: 120px;
+  font-family: cursive;
+  border-bottom: black;
+  border-style: solid;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li.a{
+  float: left;
+}
+li.b{
+  float: right;
+  color:white;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
