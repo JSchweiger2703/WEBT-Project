@@ -1,0 +1,149 @@
+html{
+    font-family: Verdana;
+    background: black;
+}
+strong{
+    color: orange;
+}
+h1{
+    text-align: center;
+    color:orange;
+}
+p{
+    text-align: left;
+    color:white;
+}
+h3{
+    text-align: left;
+    color: orange;
+}
+h2{
+    text-align: left;
+    color: orange;
+}
+article{
+    color: white;
+}
+a:link{
+    color: orange;
+}
+a:visited{
+    color: blue;
+}
+a:hover{
+    color: lightblue
+}
+a:active{
+    color: black;
+}
+li{
+    color: white;
+}
+ul.a{
+    list-style-type: circle;
+}
+ul.b{
+    list-style-type: square;
+}
+ul.c{
+    list-style-image: url("my-bullet.png");
+}
+ul.d{
+    list-style-type: upper-roman;
+}
+ul.e{
+    list-style-position: outside;
+}
+ul.f{
+    list-style-position: inside;
+}
+
+table.a{
+    padding: 8px;
+    border: 1px orange;
+}
+th{
+    font-size: 120%;
+}
+tr{
+    background-color: black;
+    color: orange;
+}
+tr:nth-child(even){
+    background-color: orange;
+    color: black;
+}
+tr:hover{
+    background-color: orangered;
+}
+
+div.trans{
+    color: black;
+    width: 90px;
+    background-color: orange;
+    transition: width 2s;
+    border-radius: 30px;
+}
+div.trans:hover
+{
+    width: 300px;
+}
+
+div.anim
+{
+    animation-name: headline;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes headline
+{
+    0%{color: red}
+    33%{color: green}
+    66%{color: blue}
+    100%{color: red}
+}
+
+div.transform
+{
+    animation-name: transform;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes transform
+{
+    from{transform: rotateY(0deg);}
+    to{transform: rotateY(365deg);}
+}
+
+div.grad
+{
+    background-image: linear-gradient(to right, red, black);
+}
+
+h2.shad
+{
+    text-shadow: 2px 2px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li.nav{
+    float: right;
+    color: white;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
