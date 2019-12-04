@@ -118,6 +118,7 @@ div.transform
 div.grad
 {
     background-image: linear-gradient(to right, red, black);
+    color: white;
 }
 
 h2.shad
@@ -129,7 +130,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: black;
   }
   
   li.nav{
@@ -145,5 +146,5 @@ ul {
   }
   
   li a:hover {
-    background-color: #111;
+    background-color: orange;
   }
