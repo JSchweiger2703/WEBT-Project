@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SportsPremium</title>
+</head>
+<body>
+        <h1 class="page-head text-center">Login</h1>
+        <form>
+            
+                <label for="username">Username</label>
+                <input type="text" id='fusername'  placeholder="Enter username">
+                
+            
+            
+                <label for="password">Password</label>
+                <input type="text"  id='fpassword' placeholder="Password">
+                     
+                <input type="button" onclick=submitToServer() value="submit">
+        </form>
+        <p  id='falsePassword'></p>
+
+    <script>
+    function submitToServer()
+    {
+        var inputUserName = document.getElementById('fusername').value;
+        var inputUserPassword = document.getElementById('fpassword').value;
+
+        var request = new XMLHttpRequest();
+        request.open('GET', 'http://localhost:3000/userdata', true);
+        request.onload = function(){
+            var data = JSON.parse(this.response);
+            
+            if (request.status >= 200 && request.status < 400)
+            {
+                for(let i = 0; i < data; i++)
+                {
+                    var userName = data[i].username;
+                    var userPassword = data[i].password;
+
+                    if(userName === inputUserName & userPassword === inputUserPassword)
+                    {
+                    location.replace('Shop.html');
+                    }
+                    else
+                    {
+                    document.getElementById('falsePassword').innerHTML() = "Falsches Passwort/Name";
+                    }
+                }        
+            }
+        };
+        request.send();
+    }
+    </script>
+</body>
+</html>
