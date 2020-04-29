@@ -1,0 +1,44 @@
+{
+  "userdata": [
+    {
+      "id": "1",
+      "username": "Moritz",
+      "password": "hallo"
+    },
+    {
+      "id": "2",
+      "username": "Benedikt",
+      "password": "asdf"
+    },
+    {
+      "username": "Benedikt",
+      "password": "asdf",
+      "id": "PEQgpvi"
+    },
+    {
+      "username": "Stummer",
+      "password": "asdf",
+      "id": "9tqCUyX"
+    },
+    {
+      "username": "hallo",
+      "password": "hallo",
+      "id": "3y3ilJe"
+    },
+    {
+      "username": "Moritz",
+      "password": "asdfghj",
+      "id": "XojjeXa"
+    },
+    {
+      "username": "Kristina",
+      "password": "Mo124210!",
+      "id": "iVntTIc"
+    },
+    {
+      "username": "Kristina",
+      "password": "Mo124210!",
+      "id": "I5pM8CB"
+    }
+  ]
+}

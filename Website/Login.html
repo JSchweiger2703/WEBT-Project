@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="LogReg.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h1>WEB Login</h1>
+        <form>
+            <label for="username">Username</label><br>
+            <input type="text" id='username'><br>
+            <label for="password">Password</label><br>
+            <input type="password" id='password'><br>
+            <input type="button" onclick="getLogin()" value="Login">
+        </form>
+        <p class='falseInput' id='falscherInput'></p>
+        <label for="notRegistered">Not Registered?</label><br>
+        <input type="button" onclick="switchToRegister()" value="Register">
+    </div>
+    <script src="bootstrap-4.4.1-dist/Java.js"></script>
+</body>
+</html>
