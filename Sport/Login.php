@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +15,6 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: rgb(235,234,247);
-background: linear-gradient(90deg, rgba(235,234,247,1) 0%, rgba(216,216,227,1) 20%, rgba(152,221,235,1) 100%); 
 }
 
 .box {
@@ -41,13 +40,13 @@ background: linear-gradient(90deg, rgba(235,234,247,1) 0%, rgba(216,216,227,1) 2
     padding: 10px 10px;
     width: 250px;
     outline: none;
-    color: white;
+    color: black;
     border-radius: 24px;
     transition: 0.25s
 }
 
 .box h1 {
-    color: white;
+    color: black;
     text-transform: uppercase;
     font-weight: 500
 }
@@ -67,7 +66,7 @@ background: linear-gradient(90deg, rgba(235,234,247,1) 0%, rgba(216,216,227,1) 2
     border: 2px solid #2ecc71;
     padding: 14px 40px;
     outline: none;
-    color: white;
+    color: black;
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer
@@ -140,19 +139,59 @@ a.socialIcon:hover,
 }
 
 .social-circle i {
-    color: #fff;
+    color: black;
     transition: all 0.8s;
     transition: all 0.8s
 }
 </style>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="Startseite.php">INFO</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Snowboard<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Skateboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ShopCart.html">CART</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active">
+              <?php
+              if($_SESSION['loggedin'])
+              {
+                echo '<a class="nav-link" href="Profile.php">Profile</a>';
+              }
+              else
+              {
+                echo '<a class="nav-link" href="Login.php">Sign in</a>';
+              }
+              ?>
+            </li>
+          </ul>    
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active">
+              <a class="nav-link" href="Register.php">Sign Up</a>
+            </li>    
+          </ul>   
+        </div>
+    </nav>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <form class="box">
+                <form class="box" action="get_userdata.php" method="post">
                     <h1>Login</h1>
-                    <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="" placeholder="Username"> <input type="password" name="" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
+                    <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="username" placeholder="Username"> <input type="password" name="password" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
                 </form>
             </div>
         </div>

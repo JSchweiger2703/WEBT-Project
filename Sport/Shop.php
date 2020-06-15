@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +28,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="nav-item active">
-              <?php 
-              session_start();
+              <?php
 
               if(!isset($_SESSION['loggedin']))
               {
@@ -41,11 +41,11 @@
               }
               else
               {
-                echo '<a class="nav-link" href="Login.php">Profile</a>';
+                echo '<a class="nav-link" href="Login.php">Sign in</a>';
               }
               ?>
             </li>
-          </ul>    
+          </ul>     
         </div>
     </nav>
     <div class="container"><table class="table table-borderless" id='prods'>
