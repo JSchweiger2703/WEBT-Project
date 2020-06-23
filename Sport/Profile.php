@@ -45,7 +45,34 @@
     </nav>
     <div class="container">
     <h1 class="page-head text-center">Profile</h1>
-    <h2>Hello <?php $user = json_decode(file_get_contents('http://localhost:3000/userdata/.$_SESSION[\'userID\']'));
-     ?>
+    <h2>Your account data:</h3><br><?php $user = json_decode(file_get_contents('http://localhost:3000/userdata/'.$_SESSION['userID']));
+    echo '
+    <form action="logout_userdata.php" method="post">
+    <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="'.$user->email.'">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="staticFirstName" class="col-sm-2 col-form-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticFirstName" value="'.$user->firstname.'">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="staticLastName" class="col-sm-2 col-form-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticLastName" value="'.$user->lastname.'">
+    </div>
+    </div>
+    <div class="form-group row">
+    <label for="staticID" class="col-sm-2 col-form-label">Your ID</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="staticID" value="'.$user->id.'">
+    </div>
+    </div>
+    <input class="btn btn-primary" type="submit"" value="Logout">
+    </form>';    ?>
 </body>
 </html>

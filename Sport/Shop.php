@@ -76,7 +76,14 @@
           $nm = $prods[$i]->productname;
           $price = $prods[$i]->productprize;
 
-            echo '<td><div class="card" style="width: 18rem;"><img class="card-img-top" src="' .$imgsrc.'"><div class="card-body"><h5 class="card-title">'.$nm.'</h5><button onclick="" class="btn btn-primary"> Add To Cart </button></div></div></td>';
+            echo '<td><form><div class="card" style="width: 18rem;"><img class="card-img-top" src="' .$imgsrc.'"><div class="card-body"><h5 class="card-title">'.$nm.'</h5><p class="card-text">'.$price.',-</p><label for="exampleFormControlSelect1">Example select</label>
+            <select name="selectAmount" class="form-control" id="exampleFormControlSelect1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select><br><button class="btn btn-primary"> Add To Cart </button></div></div></form></td>';
         }
         ?>
       </tbody>

@@ -1,14 +1,14 @@
 
 <?php session_start();
     $_SESSION['failedLogin'] = false;
-    $username = $_POST["username"];
+    $mail = $_POST["user_mail"];
     $password = $_POST["password"];
     $json = file_get_contents('http://localhost:3000/userdata');
     $profiles = json_decode($json);
 
     foreach($profiles as $currentdata)
     {
-        if($currentdata->username == $username AND $currentdata->password == $password)
+        if($currentdata->email ==$mail AND $currentdata->password == $password)
         {   
             $_SESSION['loggedin'] = true;
             $_SESSION['userID'] = $currentdata->id;

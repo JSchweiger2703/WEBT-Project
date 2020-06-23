@@ -27,9 +27,12 @@
     text-align: center;
     transition: 0.25s;
     margin-top: 100px; 
+    border-radius: 30px;
 }
-
-.box input[type="text"],
+.box:hover{
+    background: #FAFAFA;
+}
+.box input[type="email"],
 .box input[type="password"] {
     border: 0;
     background: none;
@@ -51,7 +54,7 @@
     font-weight: 500
 }
 
-.box input[type="text"]:focus,
+.box input[type="email"]:focus,
 .box input[type="password"]:focus {
     width: 300px;
     border-color: #2ecc71
@@ -154,7 +157,7 @@ a.socialIcon:hover,
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Snowboard<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="Shop.php">Snowboard<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Skateboard</a>
@@ -191,7 +194,7 @@ a.socialIcon:hover,
             <div class="card">
                 <form class="box" action="get_userdata.php" method="post">
                     <h1>Login</h1>
-                    <p class="text-muted"> Please enter your login and password!</p> <input type="text" name="username" placeholder="Username"> <input type="password" name="password" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
+                    <p class="text-muted"> Please enter your login and password!</p> <input type="email" name="user_mail" placeholder="Email"> <input type="password" name="password" placeholder="Password"> <a class="forgot text-muted" href="#">Forgot password?</a> <input type="submit" name="" value="Login" href="#">
                 </form>
             </div>
         </div>
