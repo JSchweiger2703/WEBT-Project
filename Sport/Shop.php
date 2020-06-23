@@ -35,6 +35,15 @@
                 $_SESSION['loggedin'] = false;
               }
 
+              if(!isset($_SESSION['failedRegister']))
+              {
+                $_SESSION['failedRegister'] = false;
+              }
+              
+              if(!isset($_SESSION['failedLogin']))
+              {
+                $_SESSION['failedLogin'] = false;
+              }
               if($_SESSION['loggedin'])
               {
                 echo '<a class="nav-link" href="Profile.php">Profile</a>';

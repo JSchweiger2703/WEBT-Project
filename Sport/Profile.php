@@ -43,6 +43,9 @@
           </ul>    
         </div>
     </nav>
-
+    <div class="container">
+    <h1 class="page-head text-center">Profile</h1>
+    <h2>Hello <?php $user = json_decode(file_get_contents('http://localhost:3000/userdata/.$_SESSION[\'userID\']'));
+     ?>
 </body>
 </html>

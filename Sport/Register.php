@@ -35,61 +35,38 @@
         </div>
     </nav>
     <br>
-    <div class="row justify-content-center">
-<div class="col-md-6">
-<div class="card">
-<header class="card-header">
-	<a href="Login.php" class="float-right btn btn-outline-primary mt-1">Log in</a>
-	<h4 class="card-title mt-2">Sign up</h4>
-</header>
-<article class="card-body">
-<form action="post_userdata.php" method="post">
-	<div class="form-row">
-		<div class="col form-group">
-			<label>First name </label>   
-		  	<input type="text" name="first_name" class="form-control" placeholder="">
-		</div>
-		<div class="col form-group">
-			<label>Last name</label>
-		  	<input type="text" name="last_name" class="form-control" placeholder=" ">
-		</div> 
-	</div> 
-	<div class="form-group">
-		<label>Username</label>
-		<input type="text" name="user_name" class="form-control" placeholder="">
-	</div> 
-	<div class="form-row">
-		<div class="form-group col-md-6">
-		  <label>City</label>
-		  <input name="city" type="text" class="form-control">
-		</div>
-		<div class="form-group col-md-6">
-		  <label>Country</label>
-		  <select name="country" id="inputState" class="form-control">
-		    <option> Choose...</option>
-		      <option>Austria</option>
-		      <option>Germany</option>
-		      <option>Switzerland</option>
-		  </select>
-		</div> <!-- form-group end.// -->
-	</div> <!-- form-row.// -->
-	<div class="form-group">
-		<label>Create password</label>
-	    <input name="user_password" class="form-control" type="password">
-	</div> <!-- form-group end.// -->  
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Register  </button>
-    </div> <!-- form-group// -->      
-    <small class="text-muted">By clicking the 'Sign Up' button, you confirm that you accept our <br> Terms of use and Privacy Policy.</small>                                          
+	<div class="container">
+
+    <form action="post_userdata.php" method="post">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="user_mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="user_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+  <label for="personalData">Personal</label>
+  <div id="personalData" class="row">
+    <div class="col">
+      <input name="first_name" type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input name="last_name" type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div>
+  </div>
+  <?php
+  if($_SESSION['failedRegister'] == true)
+  {
+    echo '<div class="alert alert-danger">Register Failed! Please try again!</div>';
+  }
+  ?>
+  <input type="submit" class="btn btn-primary" value="Submit">
 </form>
-</article> <!-- card-body end .// -->
-<div class="border-top card-body text-center">Have an account? <a href="Login.php">Log In</a></div>
-</div> <!-- card.// -->
-</div> <!-- col.//-->
-
-</div> <!-- row.//-->
-
-
+</div>
 </div> 
 </body>
 </html>
